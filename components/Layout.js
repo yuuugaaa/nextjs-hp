@@ -1,5 +1,6 @@
 import Head from "next/head"
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 export default function Layout({ children, title="HP by Next.js" }) {
   return (
@@ -14,17 +15,29 @@ export default function Layout({ children, title="HP by Next.js" }) {
           <div className="flex items-center py-2 px-8">
             <div className="flex space-x-4">
               <Link href="/">
-                <a className="text-gray-300 hover:bg-gray-700 py-2 px-3 rounded">
+                <a className={
+                  useRouter().pathname === "/"
+                  ? "text-gray-300 bg-gray-700 py-2 px-3 rounded"
+                  : "text-gray-300 hover:bg-gray-700 py-2 px-3 rounded"
+                }>
                   Home
                 </a>
               </Link>
               <Link href="/blog">
-                <a className="text-gray-300 hover:bg-gray-700 py-2 px-3 rounded">
+                <a className={
+                  useRouter().pathname === "/blog"
+                  ? "text-gray-300 bg-gray-700 py-2 px-3 rounded"
+                  : "text-gray-300 hover:bg-gray-700 py-2 px-3 rounded"
+                }>
                   Blog
                 </a>
               </Link>
               <Link href="/contact">
-                <a className="text-gray-300 hover:bg-gray-700 py-2 px-3 rounded">
+                <a className={
+                  useRouter().pathname === "/contact"
+                  ? "text-gray-300 bg-gray-700 py-2 px-3 rounded"
+                  : "text-gray-300 hover:bg-gray-700 py-2 px-3 rounded"
+                }>
                   Contact
                 </a>
               </Link>
