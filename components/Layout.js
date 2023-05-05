@@ -2,7 +2,7 @@ import Head from "next/head"
 import Link from "next/link"
 import { useRouter } from "next/router"
 
-export default function Layout({ children, title="HP by Next.js" }) {
+function Layout({ children, title="HP by Next.js" }) {
   return (
     <div className="flex justify-center items-center flex-col min-h-screen text-gray-600 text-sm font-sans">
       <Head>
@@ -58,3 +58,5 @@ export default function Layout({ children, title="HP by Next.js" }) {
     </div>
   )
 }
+
+export default Layout

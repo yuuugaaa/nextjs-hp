@@ -20,7 +20,7 @@ function Contact() {
         <div className="pb-2">
           <div className="mb-2">
             <p className="font-bold mb-1">e-mail</p>
-            <p className="text-xs text-gray-500">sample1@sample.com</p>
+            <p className="text-xs text-gray-500">sample@sample.com</p>
           </div>
           <div>
             <p className="font-bold mb-1">phone</p>
