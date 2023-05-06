@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Layout from "../components/Layout"
 
-function Contact() {
+export default function Contact() {
   return (
     <Layout title="Contact">
       <div className="bg-white text-center shadow-xl py-10 px-6 w-80 rounded">
@@ -82,5 +82,3 @@ function Contact() {
     </Layout>
   )
 }
-
-export default Contact

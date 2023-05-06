@@ -1,6 +1,6 @@
 import Layout from '../components/Layout'
 
-function Home() {
+export default function Home() {
   return (
     <Layout title="Home">
       <p className="text-2xl">Hello Next.js!</p>
@@ -8,4 +8,3 @@ function Home() {
   )
 }
 
-export default Home
