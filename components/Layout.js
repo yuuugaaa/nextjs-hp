@@ -3,6 +3,8 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 
 function Layout({ children, title="HP by Next.js" }) {
+  const currentUrl = useRouter().pathname
+
   return (
     <div className="flex justify-center items-center flex-col min-h-screen text-gray-600 text-sm font-sans">
       <Head>
@@ -16,7 +18,7 @@ function Layout({ children, title="HP by Next.js" }) {
             <div className="flex space-x-4">
               <Link href="/">
                 <a className={
-                  useRouter().pathname === "/"
+                  currentUrl === "/"
                   ? "text-gray-300 bg-gray-700 py-2 px-3 rounded"
                   : "text-gray-300 hover:bg-gray-700 py-2 px-3 rounded"
                 }>
@@ -25,7 +27,7 @@ function Layout({ children, title="HP by Next.js" }) {
               </Link>
               <Link href="/blog">
                 <a className={
-                  useRouter().pathname === "/blog"
+                  currentUrl === "/blog" || currentUrl === "/post/[id]"
                   ? "text-gray-300 bg-gray-700 py-2 px-3 rounded"
                   : "text-gray-300 hover:bg-gray-700 py-2 px-3 rounded"
                 }>
@@ -34,7 +36,7 @@ function Layout({ children, title="HP by Next.js" }) {
               </Link>
               <Link href="/contact">
                 <a className={
-                  useRouter().pathname === "/contact"
+                  currentUrl === "/contact"
                   ? "text-gray-300 bg-gray-700 py-2 px-3 rounded"
                   : "text-gray-300 hover:bg-gray-700 py-2 px-3 rounded"
                 }>
