@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 export default function Contact() {
   return (
     <Layout title="Contact">
-      <div className="bg-white text-center shadow-xl py-10 px-6 w-80 rounded">
+      <div className="m-8 bg-white text-center shadow-xl py-6 px-16 rounded">
         <div className="pb-2">
           <p className="font-bold text-xl">Contact Info</p>
         </div>

@@ -6,7 +6,7 @@ export default function Layout({ children, title="HP by Next.js" }) {
   const currentUrl = useRouter().pathname
 
   return (
-    <div className="flex justify-center items-center flex-col min-h-screen text-gray-600 text-sm font-sans">
+    <div className="flex justify-center items-center flex-col min-h-screen text-gray-600 text-sm font-sans bg-gray-100">
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
